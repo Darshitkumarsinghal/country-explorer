@@ -127,21 +127,51 @@ Visit 👉 http://localhost:3000
 ```
  
 country-explorer/
-├── backend/
-│   ├── src/
-│   │   ├── models/        # Mongoose models
-│   │   ├── routes/        # Express routes
-│   │   ├── controllers/   # Business logic
-│   │   ├── services/      # API/DB fetching logic
-│   │   └── index.js       # Entry point
-│   └── package.json
-├── frontend/
-│   ├── components/        # React components
-│   ├── pages/             # Next.js pages
-│   ├── utils/             # Debounce, API helpers
-│   └── package.json
-├── .env
-└── README.md
+├─ docker-compose.yml
+├─ README.md
+├─ server/
+│  ├─ package.json
+│  ├─ index.js
+│  └─ src/
+│     ├─ server.js
+│     ├─ config.js
+│     ├─ lib/
+│     │  ├─ mongo.js
+│     │  └─ levenshtein.js
+│     ├─ models/
+│     │  └─ Country.js
+│     ├─ data/
+│     │  ├─ restCountriesClient.js
+│     │  ├─ repo.js
+│     │  └─ datasource.js
+│     ├─ routes/
+│     │  ├─ health.js
+│     │  ├─ seed.js
+│     │  ├─ suggest.js
+│     │  ├─ countries.js
+│     │  └─ countryByCode.js
+│     └─ utils/
+│        └─ sanitize.js
+└─ web/
+   ├─ package.json
+   └─ app/
+      ├─ globals.css
+      ├─ layout.jsx
+      ├─ page.jsx
+      ├─ search/
+      │  └─ page.jsx
+      ├─ country/
+      │  └─ [code]/
+      │     └─ page.jsx
+      ├─ components/
+      │  ├─ SearchBar.jsx
+      │  ├─ CountryCard.jsx
+      │  ├─ Pagination.jsx
+      │  └─ SortSelect.jsx
+      └─ lib/
+         ├─ api.js
+         └─ useDebounce.js
+
 ```
 
 
